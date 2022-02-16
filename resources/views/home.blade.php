@@ -84,6 +84,7 @@
                 <li class="nav-item"> <a class="nav-link" href="tblapproved">UPP APPROVED</a></li>
                 <li class="nav-item"> <a class="nav-link" href="tblcheck">UPP check</a></li>
                 <li class="nav-item"> <a class="nav-link" href="tblclosed">UPP Closed</a></li>
+                <li class="nav-item"> <a class="nav-link" href="uppreject">UPP REJECT</a></li>
               </ul>
             </div>
         </li>

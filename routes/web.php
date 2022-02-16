@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Mail\PaymentEmail;
+use App\Mail\prosesEmail;
 use App\Models\Payment;
 use App\Models\Tbl_crupp;
 use App\Http\Controllers\TblcruppControllers;
@@ -17,6 +17,7 @@ use App\Http\Controllers\TblclosedControllers;
 use App\Http\Controllers\TblformprocsControllers;
 use App\Http\Controllers\TblformsosiControllers;
 use App\Http\Controllers\TblhouseControllers;
+use App\Http\Controllers\TblupprejectControllers;
 use App\Mail\sosilisasi;
 use App\Models\Sosial;
 
@@ -54,10 +55,11 @@ Route::resource('tblclosed',TblclosedControllers::class)->middleware('auth');;
 Route::resource('tblformprocs', TblformprocsControllers::class)->middleware('auth');;
 Route::resource('tblformsosi', TblformsosiControllers::class)->middleware('auth');;
 Route::resource('tblhouse', TblhouseControllers::class);
+Route::resource('uppreject', TblupprejectControllers::class);
 Route::post('/tblapproval/approvedCrupp', 'App\Http\Controllers\TblapprovalControllers@approvedCrupp')->name('validateCrupp');
 Route::post('/tblpproval/disapprovedCrupp', 'App\Http\Controllers\TblapprovalControllers@disapprovedCrupp')->name('dissapprovedCrupp');
 Route::post('/tblpproval/sosialisasiCrupp', 'App\Http\Controllers\TblapprovalControllers@sosialisasiCrupp')->name('sosialisasiCrupp');
-Route::get('/tblcrupp/download/{fileini}', 'App\Http\Controllers\TblcruppControllers@downloadFile')->name('downloadfile');
+Route::get('/tblcrupp/download/DATAUPP/{fileini}', 'App\Http\Controllers\TblcruppControllers@downloadFile')->name('downloadfile');
 
 
 Route::post('/', function () {
@@ -72,7 +74,7 @@ Route::post('/', function () {
 
     $payment->save();
 
-    \Mail::to('bionicbii@gmail.com') ->cc('ramaramdhani@smkwikrama.sch.id')->send(new PaymentEmail($payment,$tblcrupp));
+    \Mail::to('bionicbii@gmail.com') ->cc('ramaramdhani@smkwikrama.sch.id')->send(new prosesEmail($payment,$tblcrupp));
 
 
     return back();

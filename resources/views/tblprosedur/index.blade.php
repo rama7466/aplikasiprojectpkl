@@ -12,7 +12,7 @@
                     method="get">
                   <div class="input-group mb-3">
                     <div class="input-group-append">
-                    <input type="search" class="form-control" value="{{ request('keyword') }}" placeholder="search" name="keyword">
+                    <input type="search" class="form-control" value="{{ request('keyword') }}" placeholder="cara nama dokumen" name="keyword">
                       <button class="btn btn-outline-secondary" type="submit">search</button>
                     </div>
                   </div>

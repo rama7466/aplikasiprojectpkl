@@ -21,7 +21,7 @@ class TblcheckControllers extends Controller
         $departemen = Tbl_dprtmn::all();
         $kode_prosedur = Tbl_kodesedur::all();
         $kategori_prosedur = Tbl_kategori::all();
-        $tblcrupp = Tbl_crupp::whereIn('status',[1,3])->get();
+        $tblcrupp = Tbl_crupp::whereIn('status',[3])->get();
         $medias = Media::all();
         return view('tblcheck.index', compact('medias',$medias,'departemen',$departemen ,'kode_prosedur',$kode_prosedur,'kategori_prosedur',$kategori_prosedur,'tblcrupp',$tblcrupp))->with('i', (request()->input('page', 1) -1) * 5);
     }

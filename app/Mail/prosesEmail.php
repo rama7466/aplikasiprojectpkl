@@ -9,7 +9,7 @@ use Illuminate\Queue\SerializesModels;
 use App\Models\Payment;
 use app\Models\Tbl_crupp;
 use Illuminate\Support\Facades\Storage;
-class PaymentEmail extends Mailable
+class prosesEmail extends Mailable
 {
     use Queueable, SerializesModels;
 

@@ -1,15 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use App\Models\Tbl_crupp;
 use App\Models\Tbl_dprtmn;
 use App\Models\Tbl_kodesedur;
 use App\Models\Tbl_kategori;
 
-
-use Illuminate\Http\Request;
-
-class TblapprovalControllers extends Controller
+class TblupprejectControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +17,12 @@ class TblapprovalControllers extends Controller
      */
     public function index()
     {
+        $tblcrupp = Tbl_crupp::latest()->paginate(5);
         $departemen = Tbl_dprtmn::all();
         $kode_prosedur = Tbl_kodesedur::all();
         $kategori_prosedur = Tbl_kategori::all();
-        $tblcrupp = Tbl_crupp::all();
-        return view('tblapproval.index', compact('departemen',$departemen ,'kode_prosedur',$kode_prosedur,'kategori_prosedur',$kategori_prosedur,'tblcrupp',$tblcrupp))->with('i', (request()->input('page', 1) -1) * 5);
+         $tblcrupp = Tbl_crupp::whereIn('status',[2])->get();
+        return view('uppreject.index', compact('departemen',$departemen ,'kode_prosedur',$kode_prosedur,'kategori_prosedur',$kategori_prosedur,'tblcrupp',$tblcrupp))->with('i', (request()->input('page', 1) -1) * 5);
     }
 
     /**
@@ -89,36 +89,5 @@ class TblapprovalControllers extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function approvedCrupp(Request $request){
-        $id = $request->nomor;
-        $data = Tbl_crupp::find($id);
-
-        $data->update([
-            'progres'=>'DIPROSES',
-            'status'=>'1'
-        ]);
-
-        return redirect(route('tblapproved.index'));
-    }
-    public function disapprovedCrupp(Request $request){
-        $id = $request->nomor;
-        $data = Tbl_crupp::find($id);
-
-        $data->update([
-            'progres'=>'DITOLAK',
-            'status'=>'2']);
-
-        return redirect(route('uppreject.index'));
-    }
-    public function sosialisasiCrupp(Request $request){
-        $id = $request->nomor;
-        $data = Tbl_crupp::find($id);
-
-        $data->update([
-            'progres'=>'DISOSIALISASI',
-            'status'=>'3']);
-
-        return redirect(route('tblformsosi.create'));
     }
 }

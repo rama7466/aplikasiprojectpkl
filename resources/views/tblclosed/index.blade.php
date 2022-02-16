@@ -88,7 +88,7 @@
                       @foreach ($tblcrupp as $crpp)
                       <tr>
 
-                        <td>00{{++$i}}{{$crpp->no_upp}}</td>
+                        <td>{{$crpp->no_upp}}</td>
                         <td>{{ $crpp->tanggal_upp}}</td>
                         <td>{{ $crpp->departemen}}</td>
                         <td>{{ $crpp->pengaju}}</td>
@@ -101,7 +101,7 @@
                         <td>{{ $crpp->sebelum_perubahan }}</td>
                         <td>{{ $crpp->setelah_perubahan }}</td>
                         <td>{{ $crpp->alasan}}</td>
-                        <td>{{ $crpp->file}}</td>
+                        <td>{{ $crpp->fileini}}</td>
                         <td>{{ $crpp->tanggal_permohonan_berlaku}}</td>
                       </tr>
                       @endforeach

@@ -102,12 +102,12 @@
                                <form method="POST" action="{{route('validateCrupp')}}">
                               @csrf
                               <input type="hidden" name="nomor" value="{{$crpp->id}}">
-                              <input type="submit" value="ACCEPT" class="btn btn-info btn-sm">
+                              <input type="submit"  value="ACCEPT" class="btn btn-info btn-sm">
                                 </form>
                                <form method="POST" action="{{route('dissapprovedCrupp')}}">
                               @csrf
                               <input type="hidden" name="nomor" value="{{$crpp->id}}">
-                              <input type="submit" value="REJECT" class="btn btn-info btn-sm">
+                              <input type="submit"  onclick="return confirm('apakah anda yakin untuk reject?')" value="REJECT" class="btn btn-info btn-sm">
                                 </form>
                               </div>
                           <?php }
