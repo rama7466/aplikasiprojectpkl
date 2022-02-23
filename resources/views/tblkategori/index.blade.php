@@ -15,7 +15,7 @@
                        <tr>
                           <th>
                             <strong>
-                                kategori prosedur
+                                KATEGORI PROSEDUR
                             </strong>
                           </th>
                           <th width="245px">
@@ -31,14 +31,14 @@
                        <td>
                          <form action="{{ route('tblkategori.destroy',$ktprosedur->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('tblkategori.show',$ktprosedur->id) }}">Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('tblkategori.show',$ktprosedur->id) }}">SHOW</a>
 
-                    <a class="btn btn-primary btn-sm" href=" {{ route('tblkategori.edit',$ktprosedur->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href=" {{ route('tblkategori.edit',$ktprosedur->id) }}">EDIT</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">DELETE</button>
                 </form>
                         </form>
                        </td>

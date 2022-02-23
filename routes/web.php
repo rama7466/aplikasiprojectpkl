@@ -59,7 +59,7 @@ Route::resource('uppreject', TblupprejectControllers::class);
 Route::post('/tblapproval/approvedCrupp', 'App\Http\Controllers\TblapprovalControllers@approvedCrupp')->name('validateCrupp');
 Route::post('/tblpproval/disapprovedCrupp', 'App\Http\Controllers\TblapprovalControllers@disapprovedCrupp')->name('dissapprovedCrupp');
 Route::post('/tblpproval/sosialisasiCrupp', 'App\Http\Controllers\TblapprovalControllers@sosialisasiCrupp')->name('sosialisasiCrupp');
-Route::get('/tblcrupp/download/DATAUPP/{fileini}', 'App\Http\Controllers\TblcruppControllers@downloadFile')->name('downloadfile');
+Route::get('/tblcrupp/download/{fileini}', 'App\Http\Controllers\TblcruppControllers@downloadFile')->name('downloadfile');
 
 
 Route::post('/', function () {

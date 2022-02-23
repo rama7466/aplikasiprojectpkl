@@ -16,17 +16,17 @@
 
                          <th>
                             <strong>
-                                departemen
+                                DEPARTEMEN
                             </strong>
                          </th>
                          <th>
                             <strong>
-                               nama manager
+                               NAMA MANAGER
                             </strong>
                           </th>
                           <th>
                             <strong>
-                                email manager
+                               EMAIL MANAGER
                             </strong>
                           </th>
                           <th width="245px">
@@ -46,14 +46,14 @@
 
                          <form action="{{ route('tbldprtmn.destroy',$dprt->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('tbldprtmn.show',$dprt->id) }}">Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('tbldprtmn.show',$dprt->id) }}">SHOW</a>
 
-                    <a class="btn btn-primary btn-sm" href=" {{ route('tbldprtmn.edit',$dprt->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href=" {{ route('tbldprtmn.edit',$dprt->id) }}">EDIT</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">DELETE</button>
                 </form>
                         </form>
                        </td>

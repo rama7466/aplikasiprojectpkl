@@ -30,7 +30,7 @@
                        <button type="submit" class="btn btn-primary">SEND EMAIL</button>
 
                     </div>
-                    <a href={{ route('tblapproval.index') }}><button type="button" class="btn btn-success btn-rounded btn-fw">TO UPP PROCES</button></a>
+                    <a href={{ route('tblapproval.index') }}><button type="button" class="btn btn-success btn-rounded btn-fw">TO UPP APPROVAL</button></a>
                 </form>
             </div>
         </div>

@@ -16,77 +16,77 @@
                        <tr>
                          <th>
                             <strong>
-                           no upp
+                           NO UPP
                             </strong>
                          </th>
                          <th>
                             <strong>
-                                tanggal upp
+                                TANGGAL UPP
                             </strong>
                         </th>
                          <th>
                             <strong>
-                                departemen
+                                DEPARTEMEN
                             </strong>
                          </th>
                          <th>
                             <strong>
-                                manager approval
-                            </strong>
-                          </th>
-                          <th>
-                            <strong>
-                                email manager approval1
+                                MANAGER APPROVAL
                             </strong>
                           </th>
                           <th>
                             <strong>
-                                pengaju
+                                EMAIL MANAGER APPROVAL
                             </strong>
                           </th>
                           <th>
                             <strong>
-                                email pengaju
+                                PENGAJU
                             </strong>
                           </th>
                           <th>
                             <strong>
-                               kategori prosedur
+                               EMAIL PENGAJU
+                            </strong>
+                          </th>
+                          <th>
+                            <strong>
+                               KATEGORI PROSEDUR
                             </strong>
                           </th>
                          <th>
                             <strong>
-                                nama dan kode prosedur
+                               NAMA DAN KODE PROSEDUR
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                nama dokumen
+                               NAMA DOKUMEN
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                sebelum perubahan
+                                SEBELUM PERUBAHAN
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                setelah perubahan
+                               SETELAH PERUBAHAN
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                alasan
+                                ALASAN
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                attachment file
+                                ATTACHMENT FILE
                              </strong>
                          </th>
                          <th>
                             <strong>
-                                tanggal permohonan berlaku
+                                TANGGAL PERMOHONAN BERLAKU
                              </strong>
                           </th>
                           <th>
@@ -126,14 +126,14 @@
                        <td>
                          <form action="{{ route('tblcrupp.destroy',$crpp->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('tblcrupp.show',$crpp->id) }}">Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('tblcrupp.show',$crpp->id) }}">SHOW</a>
 
-                    <a class="btn btn-primary btn-sm" href="{{ route('tblcrupp.edit',$crpp->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('tblcrupp.edit',$crpp->id) }}">EDIR</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">DELETE</button>
                 </form>
                 @endcan
                         </form>

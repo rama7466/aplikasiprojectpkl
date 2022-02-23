@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('home')
 @section('content')
 
 <!-- partial -->
@@ -13,76 +13,86 @@
                       <thead>
                         <tr>
 
-                          <th>
-                             <strong>
-                            no upp
-                             </strong>
+                            <th width="245px">
+                                <strong>
+                                    ACTION
+                                 </strong>
+                              </th>
+                            <th>
+                               <strong>
+                              NO UPP
+                               </strong>
+                            </th>
+                            <th>
+                              <strong>
+                                  TANGGAL UPP
+                              </strong>
                           </th>
-                          <th>
-                             <strong>
-                                 tanggal upp
+                           <th>
+                              <strong>
+                                  DEPARTEMEN
+                              </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  PENGAJU
+                              </strong>
+                            </th>
+                            <th>
+                              <strong>
+                                  EMAIL PENGAJU
+                              </strong>
+                            </th>
+                            <th>
+                              <strong>
+                                  MANAGER APPROVAL
+                              </strong>
+                            </th>
+                            <th>
+                              <strong>
+                                  EMAIL MANAGER APPROVAL
+                              </strong>
+                            </th>
+                            <th>
+                              <strong>
+                                KATEGORI PROSEDUR
+                              </strong>
+                            </th>
+                           <th>
+                              <strong>
+                                  NAMA DAN KODE PROSEDUR
+                               </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  NAMA DOKUMEN
+                               </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  SEBELUM PERUBAHAN
+                               </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  SETELAH PERUBAHAN
+                               </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  ALASAN
+                               </strong>
+                           </th>
+                           <th>
+                              <strong>
+                                  ATTACHMENT FILE USER
+                               </strong>
+                           </th>
+                           <th>
+                            <strong>
+                                STATUS
                              </strong>
                          </th>
-                          <th>
-                             <strong>
-                                 departemen
-                             </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 pengaju
-                             </strong>
-                           </th>
-                           <th>
-                             <strong>
-                                 email pengaju
-                             </strong>
-                           </th>
-                           <th>
-                             <strong>
-                                 manager approval 1
-                             </strong>
-                           </th>
-                           <th>
-                             <strong>
-                                 email manager approval1
-                             </strong>
-                           </th>
-                           <th>
-                             <strong>
-                                kategori prosedur
-                             </strong>
-                           </th>
-                          <th>
-                             <strong>
-                                 nama dan kode prosedur
-                              </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 nama dokumen
-                              </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 sebelum perubahan
-                              </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 setelah perubahan
-                              </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 alasan
-                              </strong>
-                          </th>
-                          <th>
-                             <strong>
-                                 attachment file user
-                              </strong>
-                          </th>
                         </tr>
                       </thead>
                       @foreach ($tblcrupp as $crpp)
@@ -103,6 +113,7 @@
                         <td>{{ $crpp->alasan}}</td>
                         <td>{{ $crpp->fileini}}</td>
                         <td>{{ $crpp->tanggal_permohonan_berlaku}}</td>
+                        <td>{{ $crpp->progres}}</td>
                       </tr>
                       @endforeach
                     </table>

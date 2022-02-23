@@ -1,4 +1,4 @@
- @extends('welcome')
+ @extends('home')
   @section('content')
 
   <!-- partial -->
@@ -14,82 +14,82 @@
                           <tr>
                             <th width="245px">
                                 <strong>
-                                    action
+                                    ACTION
                                  </strong>
                               </th>
                             <th>
                                <strong>
-                              no upp
+                              NO UPP
                                </strong>
                             </th>
                             <th>
                                <strong>
-                                   tanggal upp
+                                   TANGGAL UPP
                                </strong>
                            </th>
                             <th>
                                <strong>
-                                   departemen
+                                   DEPARTEMEN
                                </strong>
                             </th>
                             <th>
                                <strong>
-                                   pengaju
-                               </strong>
-                             </th>
-                             <th>
-                               <strong>
-                                   email pengaju
+                                   PENGAJU
                                </strong>
                              </th>
                              <th>
                                <strong>
-                                   manager approval 1
+                                   EMAIL PENGAJU
                                </strong>
                              </th>
                              <th>
                                <strong>
-                                   email manager approval1
+                                   MANAGER APPROVAL
                                </strong>
                              </th>
                              <th>
                                <strong>
-                                  kategori prosedur
+                                   EMAIL MANAGER APPROVAL
+                               </strong>
+                             </th>
+                             <th>
+                               <strong>
+                                 KATEGORI PROSEDUR
                                </strong>
                              </th>
                             <th>
                                <strong>
-                                   nama dan kode prosedur
+                                   NAMA DAN KODE PROSEDUR
                                 </strong>
                             </th>
                             <th>
                                <strong>
-                                   nama dokumen
+                                   NAMA DOKUMEN
                                 </strong>
                             </th>
                             <th>
                                <strong>
-                                   sebelum perubahan
+                                   SEBELUM PERUBAHAN
                                 </strong>
                             </th>
                             <th>
                                <strong>
-                                   setelah perubahan
+                                   SETELAH PERUBAHAN
                                 </strong>
                             </th>
                             <th>
                                <strong>
-                                   alasan
+                                   ALASAN
                                 </strong>
                             </th>
                             <th>
                                <strong>
-                                   attachment file user
+                                   ATTACHMENT FILE USER
                                 </strong>
                             </th>
                             <th>
                                 <strong>
-                                    progress
+                                    STATUS
                                  </strong>
                              </th>
                           </tr>
