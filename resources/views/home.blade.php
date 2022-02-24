@@ -71,6 +71,7 @@
             </div>
         </li>
         @endcan
+        @can('isApproval')
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-palette menu-icon"></i>
@@ -88,6 +89,42 @@
               </ul>
             </div>
         </li>
+        @endcan
+        @can('isGuest')
+        <li class="nav-item sidebar-category">
+            <p>Navigation</p>
+            <span></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tblhouse">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">HOME</span>
+            </a>
+          </li>
+          <li class="nav-item sidebar-category">
+            <p>Components</p>
+            <span></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tblprosedur">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title">PROSEDUR</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="mdi mdi-palette menu-icon"></i>
+                <span class="menu-title">UPP ONLINE</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="tblcrupp">CREATE UPP</a></li>
+                </ul>
+              </div>
+            </li>
+            @endcan
+
   </ul>
 </nav>
     <!-- partial -->

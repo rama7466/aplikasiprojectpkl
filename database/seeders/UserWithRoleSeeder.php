@@ -30,5 +30,13 @@ class UserWithRoleSeeder extends Seeder
         $approve->password = bcrypt('password');
         $approve->role = 'approval';
         $approve->save();
+
+        $guest = new User;
+        $guest->name = 'Guest';
+        $guest->email = 'guest@app.test';
+        $guest->email_verified_at = date('Y-m-d H:i:s');
+        $guest->password = bcrypt('password');
+        $guest->role = 'guest';
+        $guest->save();
     }
 }

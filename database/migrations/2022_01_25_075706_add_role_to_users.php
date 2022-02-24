@@ -14,7 +14,7 @@ class AddRoleToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('role', ['admin', 'manager','approval'])->default('admin')->after('remember_token');
+            $table->enum('role', ['admin','approval','guest'])->default('guest')->after('remember_token');
         });
     }
 
@@ -30,4 +30,3 @@ class AddRoleToUsers extends Migration
         });
     }
 }
- 
