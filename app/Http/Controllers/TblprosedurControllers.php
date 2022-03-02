@@ -26,7 +26,7 @@ class TblprosedurControllers extends Controller
 
         $tblcrupp->appends($request->only('keyword'));
 
-
+        $tblcrupp = Tbl_crupp::whereIn('status',[3])->get();
         return view('tblprosedur.index', [
             'nama_dokumen'    => 'tblcrupp',
             'tblcrupp' => $tblcrupp,

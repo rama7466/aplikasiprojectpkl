@@ -63,18 +63,9 @@
                         <td>{{ $crpp->nama_dokumen}}</td>
                         <td>{{ $crpp->tanggal_permohonan_berlaku}}</td>
                         <td>{{ $crpp->progres}}</td>
-                       <td>
-                         <form action="{{ route('tblcrupp.destroy',$crpp->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('tblcrupp.show',$crpp->id) }}">Show</a>
-
-                    <a class="btn btn-primary btn-sm" href="{{ route('tblcrupp.edit',$crpp->id) }}">Edit</a>
-
-                    @csrf
-                    @method('DELETE')
-
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
-                </form>
+  <td>
+            
                         </form>
                        </td>
                      </tr>

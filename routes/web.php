@@ -18,6 +18,7 @@ use App\Http\Controllers\TblformprocsControllers;
 use App\Http\Controllers\TblformsosiControllers;
 use App\Http\Controllers\TblhouseControllers;
 use App\Http\Controllers\TblupprejectControllers;
+use App\Http\Controllers\TambahprosedurController;
 use App\Mail\sosilisasi;
 use App\Models\Sosial;
 
@@ -55,6 +56,7 @@ Route::resource('tblclosed',TblclosedControllers::class)->middleware('auth');;
 Route::resource('tblformprocs', TblformprocsControllers::class)->middleware('auth');;
 Route::resource('tblformsosi', TblformsosiControllers::class)->middleware('auth');;
 Route::resource('tblhouse', TblhouseControllers::class);
+Route::resource('tambahprosedur', TambahprosedurController::class);
 Route::resource('uppreject', TblupprejectControllers::class);
 Route::post('/tblapproval/approvedCrupp', 'App\Http\Controllers\TblapprovalControllers@approvedCrupp')->name('validateCrupp');
 Route::post('/tblpproval/disapprovedCrupp', 'App\Http\Controllers\TblapprovalControllers@disapprovedCrupp')->name('dissapprovedCrupp');

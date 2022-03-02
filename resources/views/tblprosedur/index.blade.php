@@ -17,6 +17,7 @@
                     </div>
                   </div>
                   </form>
+                  <td> <a class="btn btn-info btn-sm" href="tambahprosedur/create">+TAMBAH</a> </td>
                  <div class="table-responsive">
                    <table class="table table-striped">
                      <thead>
@@ -53,11 +54,7 @@
                                    Tanggal berlaku
                                </strong>
                            </th>
-                           <th>
-                            <strong>
-                                status
-                            </strong>
-                        </th>
+
                            <th>
                             <strong>
                                 action
@@ -74,8 +71,11 @@
                        <td>{{ $crpp->tanggal_upp}}</td>
                        <td>{{ $crpp->fileini}}</td>
                        <td>{{ $crpp->tanggal_permohonan_berlaku}}</td>
-                       <td>{{ $crpp->progres}}</td>
                        <td> <a class="btn btn-info btn-sm" href="{{ route('tblcrupp.show',$crpp->id) }}">Show</a> </td>
+
+                       @can('isAdmin')
+                       <td> <a class="btn btn-info btn-sm" href="{{ route('tblcrupp.edit',$crpp->id) }}">EDIT</a> </td>
+                       @endcan
                      </tr>
                      @endforeach
                    </table>

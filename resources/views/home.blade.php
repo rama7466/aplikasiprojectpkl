@@ -70,9 +70,7 @@
               </ul>
             </div>
         </li>
-        @endcan
-        @can('isApproval')
-        <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-palette menu-icon"></i>
               <span class="menu-title">APPROVAL</span>
@@ -86,6 +84,20 @@
                 <li class="nav-item"> <a class="nav-link" href="tblcheck">UPP check</a></li>
                 <li class="nav-item"> <a class="nav-link" href="tblclosed">UPP Closed</a></li>
                 <li class="nav-item"> <a class="nav-link" href="uppreject">UPP REJECT</a></li>
+              </ul>
+            </div>
+        </li>
+        @endcan
+        @can('isApproval')
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="mdi mdi-palette menu-icon"></i>
+              <span class="menu-title">APPROVAL</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="tblapproval">UPP Aproval</a></li>
               </ul>
             </div>
         </li>
