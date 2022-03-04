@@ -35,13 +35,13 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>kode prosedur:</strong>
+            <strong>KATEGORI prosedur:</strong>
             <input class="form-control" name="kategori_prosedur" placeholder="Content">
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong> Kategori Prosedur:</strong>
+            <strong> KODE Prosedur:</strong>
             <input class="form-control" name="kode_prosedur" placeholder="Content">
         </div>
     </div>
